@@ -17,6 +17,5 @@ res.data.items.snippet
 res.data.items.htmlSnpippet
 res.data.items.formattedUrl
 res.data.items.htmlFormattedUrl
-
 console.log(baseURL);
 */
