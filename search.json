@@ -1,3 +1,59 @@
 {
-    
+    "data": [{
+            "title": "London's Best Burgers (Tried And Tested)",
+            "link": "https://www.esquire.com/uk/food-drink/reviews/g9570/londons-best-burgers-delicious/",
+            "snippet": "Burgers are an ever presence on menus across London, but how many of them actually deserve your time and money? To help you out, we've taken a bite out of the very best buns the capital has to offer"
+        },
+        {
+            "title": "Javascript",
+            "link": "https://www.javascript.com/",
+            "snippet": "JavaScript.com is a resource for the JavaScript community. You will find resources and examples for JavaScript beginners as well as support for JavaScript"
+        },
+        {
+            "title": "Cheap Flights from London to New York from £223 - KAYAK",
+            "link": "https://www.kayak.co.uk/flight-routes/London-LON/New-York-NYC",
+            "snippet": "When you're booking flights from London to New York, there's a good chance you'll fly out of London Heathrow Airport. Heathrow is the second busiest airport in"
+        },
+        {
+            "title": "Christmas In London 2019: A Guide To Festive Events",
+            "link": "https://londonist.com/christmas-in-london",
+            "snippet": "Looking for things to do in London at Christmas? Whether you live here or are visiting the capital over the holiday period, it's a great place to get festive, with"
+        },
+        {
+            "title": "Ford Motor Cars UK",
+            "link": "https://www.ford.co.uk/",
+            "snippet": "Welcome to the official Ford UK homepage. Find out more information on our Ford cars, vans & pickups range, promotions, financing, services & repairs."
+        },
+        {
+            "title": "BBC News",
+            "link": "https://www.bbc.co.uk/news",
+            "snippet": "BBC News provides trusted World and UK news as well as local and regional perspectives. ... The latest global news, sport, weather and documentaries"
+        },
+        {
+            "title": "ASOS",
+            "link": "https://www.asos.com/",
+            "snippet": "Discover the latest fashion and trends in menswear and womenswear at ASOS. Shop this season’s collection of clothes, accessories, beauty and more."
+        },
+        {
+            "title": "Wagamama",
+            "link": "https://www.wagamama.com",
+            "snippet": "Inspired by japanese noodle bars, our wagamama restaurants are known for fast, fresh food that is full of authentic asian ingredients. You can eat in – and enjoy our famously friendly service – or order your favourite wagamama dishes to take-out."
+        },
+        {
+            "title": "HSBC UK",
+            "link": "https://www.hsbc.co.uk",
+            "snippet": "Welcome to HSBC UK banking products including current accounts, loans, mortgages, credit cards. Also Premier and Advance banking and more…"
+        },
+        {
+            "title": "NHS",
+            "link": "https://www.nhs.uk/",
+            "snippet": "Find information and advice on health conditions, symptoms, healthy living, medicines and how to get help."
+        }
+
+
+
+
+
+    ]
+
 }
