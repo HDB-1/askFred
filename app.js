@@ -38,7 +38,7 @@ app.post("/search", (req, res) => {
 })
 
 app.get("/result", (req, res) => {
-    
+
 })
 
 // Listening to the server on port 8080
@@ -55,9 +55,9 @@ function search(query = "books") {
 
     axios.get(baseURL).then((response) => {
         response = res.request;
-    }).catch ((error) => {
+    }).catch((error) => {
         console.log(error.message)
-    }) ;
+    });
     return response;
 };
 
