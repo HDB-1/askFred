@@ -25,7 +25,12 @@ app.use(bodyParser.urlencoded({extended: true})); //find out more....
 app.get('/', (req, res) => res.status(202).sendFile(path.join(__dirname, 'views/index.html')));
 
 app.post("/search", (req, res) => {
-    searchTerm = req.body;
+    const searchTerm = req.body;
+    const url = 'http://127.0.0.1:8080/result';
+
+    axios.get(url).then((response) => { 
+        res.send(response.data)
+    })
 });
 
 app.get("/result", (req, res) => {
