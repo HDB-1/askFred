@@ -1,11 +1,12 @@
-// const http = require('http');
+const http = require('http');
 // Importing body-parser pkg
-// const bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 // Importing path pkg
 const path = require('path');
 // Importing express pkg
 const express = require('express');
 // Making an express application
+const axios = require('axios');
 const app = express();
 // Render HTML files (from 'views' directory) using the EJS view engine
 app.set('views', path.join(__dirname, 'views'));
@@ -16,29 +17,29 @@ app.set('view engine', 'html');
 // To extract form data from the POST request body
 app.use(express.urlencoded());
 // Finishing up the body-parser set up
-//app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.urlencoded({extended: true})); //find out more....
 //
+
 let searchTerm;
 
 const search = (query = "books") => {
-    const axios = require('axios');
-
+    
     const apiKey = 'AIzaSyBFaFj6n5PwPWLd2EP3fr1PIHVVBRCLtNs';
     const engineID = '008950057093096505639:pxznmv2vxxr';
     // const query = 'books';
     const baseURL = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${engineID}&q=${query}`;
-    let response;
+    
+    // let response;
 
     axios.get(baseURL).then((response) => {
-        response = response;
         console.log(response);
-        return response;
+        // return response;
 
     }).catch ((error) => {
         console.log(error.message)
     }) ;
 
-    return response;
+    // return response;
 };
 
 // Entering 'localhost:8080' into the url presents the homepage
