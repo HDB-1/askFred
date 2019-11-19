@@ -1,0 +1,20 @@
+{
+  "name": "askfred",
+  "version": "1.0.0",
+  "description": "Another version of Google",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HDB-1/askFred.git"
+  },
+  "author": "Yusaf, Harry & Lawrencia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HDB-1/askFred/issues"
+  },
+  "homepage": "https://github.com/HDB-1/askFred#readme"
+}
