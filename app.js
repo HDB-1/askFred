@@ -11,8 +11,8 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 // Enabling express to use css and js files
 app.use(express.static(`${__dirname}/public`));
-app.use(express.static(`${__dirname}/views`));
-//app.engine('html', require('ejs').renderFile);
+app.use(express.static(`${__dirname}/assets`));
+app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 // To extract form data from the POST request body
 app.use(express.urlencoded());
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({extended: true})); //find out more....
 
 
 // Entering 'localhost:8080' into the url presents the homepage
-app.get('/', (req, res) => res.status(202).sendFile(path.join(__dirname, 'views/index.html')));
+app.get('/', (req, res) => res.status(200).render('index.html'));
 
 app.post("/search", (req, res) => {
     const searchTerm = req.body;
