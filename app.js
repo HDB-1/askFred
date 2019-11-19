@@ -18,7 +18,6 @@ app.set('view engine', 'html');
 app.use(express.urlencoded());
 // Finishing up the body-parser set up
 app.use(bodyParser.urlencoded({extended: true})); //find out more....
-//
 
 let searchTerm;
 
