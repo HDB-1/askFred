@@ -12,6 +12,7 @@ const app = express();
 app.set('views', path.join(__dirname, 'views'));
 // Enabling express to use css and js files
 app.use(express.static(`${__dirname}/public`));
+app.use(express.static(`${__dirname}/views`));
 //app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 // To extract form data from the POST request body
@@ -29,6 +30,10 @@ app.post("/search", (req, res) => {
 
 app.get("/result", (req, res) => {
     res.sendFile(path.join(__dirname, "search.json"));
+});
+
+app.get("/mail", (req, res) => {
+    res.sendFile(path.join(__dirname, "views/mail.html"));
 });
 
 // Listening to the server on port 8080
