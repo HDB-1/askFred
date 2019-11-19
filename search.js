@@ -9,14 +9,14 @@ const baseURL = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${e
 axios.get(baseURL).then((res) => console.log(res))
 
 /*
-res.items.title
-res.items.htmlTitle
-res.items.link
-res.items.displayLink
-res.items.snippet
-res.items.htmlSnpippet
-res.items.formattedUrl
-res.items.htmlFormattedUrl
+res.data.items.title
+res.data.items.htmlTitle
+res.data.items.link
+res.data.items.displayLink
+res.data.items.snippet
+res.data.items.htmlSnpippet
+res.data.items.formattedUrl
+res.data.items.htmlFormattedUrl
 
 console.log(baseURL);
 */
