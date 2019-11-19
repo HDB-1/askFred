@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/HDB-1/askFred/issues"
   },
-  "homepage": "https://github.com/HDB-1/askFred#readme"
+  "homepage": "https://github.com/HDB-1/askFred#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.3",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.4",
+    "path": "^0.12.7"
+  }
 }
