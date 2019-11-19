@@ -36,6 +36,7 @@ h1 {
     /* align-self: center; */
     text-align: center;
     /* align-content: center; */
+    margin-bottom: 20px;
 }
 
 header p {
@@ -62,7 +63,7 @@ header p {
 
 #btn {
     /* float: left; */
-    width: 8%;
+    width: 10%;
     font-size: 14px;
     padding: 10px;
     background-color: rgb(60, 132, 255);
@@ -82,10 +83,42 @@ header p {
 }
 
 footer {
-    bottom: 0;
+    position: relative;
+    bottom: 0%;
+    font-size: 14px;
+    background-color: rgb(237, 237, 237);
+    width: 100%;
 }
 
 footer p {
     text-align: right;
     margin: 10px;
+}
+
+.grid-container {
+    display: grid;
+    width: fit-content;
+    grid-template-columns: 150px 150px 150px;
+    grid-gap: 20px;
+    background-color: rgb(237, 237, 237);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 20px auto 50px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+.grid-item img {
+    width: 100px;
+    height: 100px;
+}
+
+.grid-item img:hover {
+    cursor: pointer;
+    opacity: 0.3;
 }
