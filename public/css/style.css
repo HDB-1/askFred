@@ -1,3 +1,13 @@
+/* Brings the header to the top */
+header {
+    top: 0;
+}
+
+header p {
+    text-align: left;
+    margin: 10px;
+}
+
 body {
     display: inline;
     background-color: white;
@@ -27,7 +37,6 @@ body {
     border: 1px solid grey;
     cursor: pointer;
     border-left: none;
-
 }
 
 #btn:hover {
@@ -40,43 +49,18 @@ h1 {
     text-align: center;
 }
 
-.l1 {
-    color: rgb(0, 102, 255);
-}
-
-.l2 {
-    color: rgb(255, 0, 0);
-}
-
-.l3 {
-    color: rgb(222, 201, 47);
-}
-
-.l4 {
-    color: rgb(0, 102, 255);
-}
-
-.l5 {
-    color: rgb(3, 155, 0);
-}
-
-.l6 {
-    color: rgb(255, 0, 0);
-}
-
-.l7 {
-    color: rgb(222, 201, 47);
-}
-
-footer {
+.box {
     position: fixed;
-    bottom: 0;
     font-size: 14px;
     background-color: rgb(211, 211, 211);
     width: 100%;
 }
 
-p {
+footer {
+    bottom: 0;
+}
+
+footer p {
     text-align: right;
     margin: 10px;
 }
