@@ -1,13 +1,12 @@
 const http = require('http');
-// Importing body-parser pkg
 const bodyParser = require('body-parser');
-// Importing path pkg
 const path = require('path');
-// Importing express pkg
 const express = require('express');
-// Making an express application
 const axios = require('axios');
+
+// Making an express application
 const app = express();
+
 // Render HTML files (from 'views' directory) using the EJS view engine
 app.set('views', path.join(__dirname, 'views'));
 // Enabling express to use css and js files
