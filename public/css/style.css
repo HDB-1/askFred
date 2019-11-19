@@ -1,3 +1,83 @@
 body {
+    display: inline;
+    width: 100%;
     background-color: white;
+}
+
+#searchbar {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgb(235, 235, 235);
+    border: 1px solid grey;
+    padding: 10px;
+    float: left;
+}
+
+#btn {
+    float: left;
+    width: 15%;
+    font-size: 14px;
+    padding: 10px;
+    background-color: rgb(60, 132, 255);
+    color: white;
+    border-radius: 5px;
+    border: 1px solid grey;
+    cursor: pointer;
+    border-left: none;
+
+}
+
+#btn:hover {
+    background: hsl(207, 100%, 35%);
+}
+
+h1 {
+    font-size: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.l1 {
+    color: rgb(0, 102, 255);
+}
+
+.l2 {
+    color: rgb(255, 0, 0);
+}
+
+.l3 {
+    color: rgb(222, 201, 47);
+}
+
+.l4 {
+    color: rgb(0, 102, 255);
+}
+
+.l5 {
+    color: rgb(3, 155, 0);
+}
+
+.l6 {
+    color: rgb(255, 0, 0);
+}
+
+.l7 {
+    color: rgb(222, 201, 47);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    font-size: 14px;
+    background-color: rgb(211, 211, 211);
+    width: 100%;
+}
+
+p {
+    text-align: right;
+    margin: 10px;
 }
