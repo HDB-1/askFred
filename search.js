@@ -6,7 +6,7 @@ const engineID = '008950057093096505639:pxznmv2vxxr';
 const query = 'books';
 const baseURL = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${engineID}&q=${query}`;
 
-axios.get(baseURL).then((res) => console.log(res))
+axios.get(baseURL).then((res) => console.log(res.request))
 
 /*
 res.data.items.title
