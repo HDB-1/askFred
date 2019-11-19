@@ -1,6 +1,7 @@
 // must npm install axios first
 const axios = require('axios');
 
+/*
 const apiKey = 'AIzaSyBFaFj6n5PwPWLd2EP3fr1PIHVVBRCLtNs';
 const engineID = '008950057093096505639:pxznmv2vxxr';
 const query = 'books';
@@ -24,3 +25,9 @@ res.data.items.formattedUrl
 res.data.items.htmlFormattedUrl
 console.log(baseURL);
 */
+
+
+
+const url = 'http://127.0.0.1:8080/result';
+
+axios.get(url).then((response) => console.log(response))
