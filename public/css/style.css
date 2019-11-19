@@ -1,6 +1,41 @@
 /* Brings the header to the top */
 header {
     top: 0;
+    right: 0%;
+    left: 0%;
+}
+
+.box {
+    position: fixed;
+    font-size: 14px;
+    background-color: rgb(237, 237, 237);
+    width: 100%;
+}
+
+.navbar {
+    color: rgb(96, 96, 96);
+    font-size: 18px;
+    font-variant: small-caps;
+}
+
+.navbar:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: black;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    justify-content: flex-start;
+}
+
+.search-row {
+    /* display: inline; */
+    /* align-self: center; */
+    text-align: center;
+    /* align-content: center; */
 }
 
 header p {
@@ -8,27 +43,26 @@ header p {
     margin: 10px;
 }
 
-body {
-    display: inline;
-    background-color: white;
-}
-
 #searchbar {
-    display: flex;
-    justify-content: center;
-    width: 60%;
+    /* display: flex;
+    justify-content: center; */
+    width: 40%;
     padding: 5px;
     border-radius: 10px;
     font-size: 20px;
     background-color: rgb(235, 235, 235);
     border: 1px solid grey;
     padding: 10px;
-    float: left;
+    /* float: left; */
+}
+
+#searchbar:focus {
+    outline: none;
 }
 
 #btn {
-    float: left;
-    width: 15%;
+    /* float: left; */
+    width: 8%;
     font-size: 14px;
     padding: 10px;
     background-color: rgb(60, 132, 255);
@@ -43,17 +77,8 @@ body {
     background: hsl(207, 100%, 35%);
 }
 
-h1 {
-    font-size: 100px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-}
-
-.box {
-    position: fixed;
-    font-size: 14px;
-    background-color: rgb(211, 211, 211);
-    width: 100%;
+#btn:focus {
+    outline: none;
 }
 
 footer {
