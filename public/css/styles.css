@@ -74,25 +74,23 @@ header p {
     border-left: none;
 }
 
-#btn:hover {
+.btn:hover {
     background: hsl(207, 100%, 35%);
 }
 
-#btn:focus {
+.btn:focus {
     outline: none;
 }
 
 footer {
-    /* position: relative;
-    bottom: 0%;
-    font-size: 14px;
-     */
-    /* position: fixed;
+    position: absolute;
     bottom: 0;
-    height: 20px;
-    margin: 0 auto;
+    right: 0;
+    left: 0;
+    font-size: 14px;
+    height: 45px;
     background-color: rgb(237, 237, 237);
-    width: 100%; */
+    width: 100%;
 }
 
 footer p {
