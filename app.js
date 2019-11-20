@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
 
 // Making an express application
 const app = express();
