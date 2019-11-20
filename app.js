@@ -28,12 +28,12 @@ app.get('/', (req, res) => res.status(200).render('index'));
 
 app.post("/search", (req, res) => {
     const query = JSON.stringify(req.body);
-    //console.log(query);
+    console.log(query);
     //console.log(typeof query)
     googleAPI.search(query)
     .then(res.sendFile(path.join(__dirname, "./search.json")))
+    .then(res.redirect("results"))
     .catch((error) => console.log(error.message));
-
 });
 
 app.get("/data", (req, res) => {
@@ -46,8 +46,10 @@ app.get("/data", (req, res) => {
 app.get("/search.json", (req, res) => res.sendFile(path.join(__dirname, "search.json")));
 
 // This route presents the results page
-app.get("/results", (req, res) =>  res.status(200).render('results'));
+app.post("/results", (req, res) =>  res.status(200).render('results'));
  // res.sendFile(path.join(__dirname, "results"));
+
+app.get("/results", (req, res) => res.sendFile(path.join(__dirname,"views/results.html")));
 
 //  This route presents the mail page
  app.get("/mail", (req, res) => res.status(200).render('mail'));
