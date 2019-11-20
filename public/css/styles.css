@@ -31,11 +31,10 @@ h1 {
     justify-content: flex-start;
 }
 
-.search-row {
-    /* display: inline; */
-    /* align-self: center; */
+.flex-container {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    /* align-content: center; */
     margin-bottom: 20px;
 }
 
@@ -45,8 +44,6 @@ header p {
 }
 
 #searchbar {
-    /* display: flex;
-    justify-content: center; */
     width: 40%;
     padding: 5px;
     border-radius: 10px;
@@ -54,7 +51,6 @@ header p {
     background-color: rgb(235, 235, 235);
     border: 1px solid grey;
     padding: 10px;
-    /* float: left; */
 }
 
 #searchbar:focus {
@@ -123,4 +119,15 @@ footer p {
 .grid-item img:hover {
     cursor: pointer;
     opacity: 0.3;
+}
+
+#search {margin-right: 10px;}
+
+#random {
+    margin-left: 10px;
+}
+
+.flex-container button {
+    margin-top: 10px;
+    margin-bottom: 15px;
 }
