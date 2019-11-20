@@ -1,16 +1,25 @@
+//const axios = require('axios');
 
 async function getSearchResults() {
-    promise = await axios.get("http://localhost:8080/search.json");
+    promise = await axios.get("http://localhost:8080/data");
     return promise;
 }
 
 $(document).ready(() => {
-
-        $('#search').click(
+    let submit_button = document.querySelector("#search");
+    
+        
+       
+        
+            //event.preventDefault();
+            
             getSearchResults().then((response) =>  {
-                return response.data.data;}).then((items) => {
+                console.log(response.data.data)
+                return response.data.data;}).then((x) => {
+                    console.log(x)
                 let count = 1;
-                items.forEach(element => {
+                
+                x.forEach(element => {
                     $(".container-all-results")
                     .append(`<div class="result" id="result${count}"></div>`)
 
@@ -32,20 +41,21 @@ $(document).ready(() => {
                     .append(`<p class="snippet" id="snippet${count}"></p>`)
 
                     $(`#snippet${count}`).text(`${element.snippet}`)
+
+                    
+
                     count++
                 });
                 
-            }).then()
+            })
             .catch((error) => console.log(error.message))
-        );
-
 
   
 
   
 
-       
+
     
- 
+
 
 })
