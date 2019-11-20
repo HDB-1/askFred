@@ -9,10 +9,14 @@
 </head>
 
 <body>
-    <header class="box">
+        <div class="page-container">
+            <div class="content">
+    
+    <div class="box homepage-header">
         <p><a class="navbar" href="http://localhost:8080/mail">About</a><a class="navbar"
                 href="http://localhost:8080/mail" style="float: right;">AfMail</a></p>
-    </header>
+        </div>
+    
 
     <!-- Page title -->
     <h1>
@@ -32,7 +36,7 @@
             </form>
                 <form action="/lucky" method="GET"><button id="random" class="btn" type="submit">Feeling Lucky?</button></form></div>
         
-    </div>
+    
 
     <div class="grid-container">
         <div class="grid-item"><a href="https://www.facebook.com/" target="_blank"><img src="assets/facebook.png" alt="facebook" border="0"></a></div>
@@ -42,15 +46,23 @@
         <div class="grid-item"><a href="https://www.youtube.com/" target="_blank"><img src="assets/youtube.png" alt="youtube" border="0"></a></div>
         <div class="grid-item"><a href="https://www.bbc.co.uk/" target="_blank"><img src="assets/bbc.png" alt="bbc" border="0"></a></div>
     </div>
+</div>
+
+    <footer>
+
+            <p>askFred published 2019</p>
+        </footer>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-</body>
-<footer>
-    <p>askFred published 2019</p>
-</footer>
+   <script src="js/index.js"></script>
 
+
+
+
+</body>
 </html>
