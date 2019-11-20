@@ -1,13 +1,9 @@
-
 async function getSearchResults() {
     promise = await axios.get("http://localhost:8080/search.json");
     return promise;
 }
 
 $(document).ready(() => {
-        
-       
-        
             //event.preventDefault();
             
             getSearchResults().then((response) =>  {
@@ -37,13 +33,7 @@ $(document).ready(() => {
                     $(`#result${count}`)
                     .append(`<p class="snippet" id="snippet${count}"></p>`)
 
-                    $(`#snippet${count}`).text(`${item[index].snippet}`)
-
-                    
-
-               
-                
+                    $(`#snippet${count}`).text(`${item[index].snippet}`) 
             })
             .catch((error) => console.log(error.message))
-
-})
+});
