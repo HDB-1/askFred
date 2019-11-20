@@ -123,11 +123,9 @@ footer p {
 
 #search {margin-right: 10px;}
 
-#random {
-    margin-left: 10px;
-}
+#random {margin-left: 10px;}
 
 .flex-container button {
     margin-top: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
