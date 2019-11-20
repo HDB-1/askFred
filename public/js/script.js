@@ -27,13 +27,11 @@ function myFunction() {
 //const axios = require('axios');
 
 async function getSearchResults() {
-    promise = await axios.get("http://localhost:8080/data");
+    promise = await axios.get("http://localhost:8080/search.json");
     return promise;
 }
 
 $(document).ready(() => {
-    let submit_button = document.querySelector("#search");
-    
         
        
         
