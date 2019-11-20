@@ -27,13 +27,12 @@ app.use(bodyParser.urlencoded({extended: true})); //find out more....
 app.get('/', (req, res) => res.status(200).render('index'));
 
 app.post("/search", (req, res) => {
-    const query = JSON.stringify(req.body)
-    
-    //console.log(query);
+    const query = JSON.stringify(req.body.search)
+    console.log(req.body.search);
     console.log("converted query into string")
     googleAPI.search(query)
     .then(res.sendFile(path.join(__dirname, "./search.json")))
-    .then(res.redirect("results"))
+    .then( res.redirect("results"))
     .catch((error) => console.log(error.message));
     //.then(res.sendFile(path.join(__dirname, "./search.json")))
     //.then(res.redirect("results"))

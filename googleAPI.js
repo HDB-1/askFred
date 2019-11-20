@@ -5,9 +5,10 @@ const fs = require("fs");
 
 module.exports = {
     search: async (query = 'books') => {
-        const apiKey = 'AIzaSyBXxr4fB7X8eyCf_mdx78Aj71QOMSwKhwk';
-        const engineID = '008950057093096505639:ps7kra9kwko';
+        const apiKey = 'AIzaSyA-TdPCCDqB8lR_4TQ2EvfN1mB7L0dX9rg';
+        const engineID = '008950057093096505639:dtlta9pfmwz';
         const baseURL = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${engineID}&q=${query}`;
+        console.log(baseURL)
         console.log("created base URL")
         axios.get(baseURL).then(res => {
             console.log("got response from axios")
