@@ -10,14 +10,16 @@ const googleAPI = require('./googleAPI');
 const app = express();
 
 // Render HTML files (from 'views' directory) using the EJS view engine
-app.set('views', path.join(__dirname, 'views'));
-// Enabling express to use css and js files
-app.use(express.static(`${__dirname}/public`));
-app.use(express.static(`${__dirname}/assets`));
+app.set('views', `${__dirname}/views`)
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
+
+// Accessing css and js files
+app.use(express.static(`${__dirname}/public`));
+
 // To extract form data from the POST request body
 app.use(express.urlencoded());
+
 // Finishing up the body-parser set up
 app.use(bodyParser.urlencoded({extended: true})); //find out more....
 
@@ -43,9 +45,11 @@ app.get("/data", (req, res) => {
 
 app.get("/search.json", (req, res) => res.sendFile(path.join(__dirname, "search.json")));
 
+// This route presents the results page
 app.get("/results", (req, res) =>  res.status(200).render('results'));
  // res.sendFile(path.join(__dirname, "results"));
 
+//  This route presents the mail page
  app.get("/mail", (req, res) => res.status(200).render('mail'));
     // res.sendFile(path.join(__dirname, "mail"));
     

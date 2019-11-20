@@ -62,7 +62,6 @@ header p {
 }
 
 .btn {
-    /* float: left; */
     width: 10%;
     font-size: 14px;
     padding: 10px;
@@ -95,7 +94,7 @@ footer {
 
 footer p {
     text-align: right;
-    margin: 10px;
+    margin-right: 10px;
 }
 
 .grid-container {
