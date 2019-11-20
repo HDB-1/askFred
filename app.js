@@ -59,10 +59,10 @@ app.get("/results", (req, res) => {
     res.sendFile(path.join(__dirname,"views/results.html"))});
 
 //  This route presents the mail page
- app.get("/mail", (req, res) => res.status(200).render('mail'));
+app.get("/mail", (req, res) => res.status(200).render('mail'));
     // res.sendFile(path.join(__dirname, "mail"));
 
-    app.get("/lucky", (req, res) => {
+app.get("/lucky", (req, res) => {
         console.log("get request to render lucky page")
         res.sendFile(path.join(__dirname,"views/lucky.html"))});
     
