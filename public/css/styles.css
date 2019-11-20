@@ -129,3 +129,7 @@ footer p {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+form {
+    display: inline;
+}
