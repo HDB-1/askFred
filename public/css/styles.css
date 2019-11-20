@@ -1,22 +1,16 @@
 body, html {
     height: 100%;
     width: 100%;
-    
 }
-
 
 /* Brings the header to the top */
 .homepage-header {
-   
     top: 0;
     left: 0;
     right: 0;
     margin: 0;
     width: 100%;
     height: 20px;
-
-
-
 }
 
 .homepage-header p {
@@ -56,7 +50,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-
 header p {
     text-align: left;
     margin: 10px;
@@ -72,9 +65,9 @@ header p {
     padding: 10px;
 }
 
-#searchbar:hover {
+/* #searchbar:hover {
     background-color: rgb(222, 201, 47, 0.3)
-}
+} */
 
 #searchbar:focus {
     outline: none;
@@ -93,13 +86,9 @@ header p {
     border-left: none;
 }
 
-.btn:hover {
-    background: hsl(207, 100%, 35%);
-}
+.btn:hover {background: hsl(207, 100%, 35%);}
 
-.btn:focus {
-    outline: none;
-}
+.btn:focus {outline: none;}
 
 footer {
     position: absolute;
@@ -154,14 +143,11 @@ footer p {
     margin-bottom: 20px;
 }
 
-form {
-    display: inline;
-}
+form {display: inline;}
 
 .page-container {
     position: relative;
-    min-height: 100vh;
-   
+    min-height: 100vh;  
 }
 
 .content {
@@ -172,4 +158,3 @@ form {
     margin: 0;
     padding-top: 0px;
 }
-
