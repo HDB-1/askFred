@@ -158,3 +158,45 @@ form {display: inline;}
     margin: 0;
     padding-top: 0px;
 }
+
+button {
+    height: 45px;;
+}
+
+@media only screen and (max-width: 1171px) {
+    /*do something with button*/
+   
+
+  }
+
+  @media only screen and (max-width: 690px) {
+    /*do something with button*/
+    h1 {
+        font-size: 45px;
+    }
+
+    .grid-item img {
+        width: 50px;
+        height: 50px;
+    }
+    button {
+        min-width: 100px;
+    }
+    .grid-container {
+        display: grid;
+        width: fit-content;
+        grid-template-columns: 75px 75px 75px;
+        grid-gap: 10px;
+        background-color: rgb(237, 237, 237);
+        padding: 5px;
+        border-radius: 5px;
+        margin: 10px auto 25px;
+    }
+
+    header {
+       display: flex;
+       flex-direction: column;
+    }
+
+  }
+
