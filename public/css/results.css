@@ -8,5 +8,91 @@
     flex-direction: column;
     margin: 15px;
     border: 1px;
+
 }
 
+.box {
+    padding: 10px 16px;
+    background: rgb(255, 255, 255);
+    color: #f1f1f1;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* for JS*/
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+
+.logo {
+    width: 200px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.navbar {
+    color: rgb(96, 96, 96);
+    font-size: 18px;
+    font-variant: small-caps;
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    right: 0%;
+    top: 0%;
+}
+
+.navbar:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: black;
+}
+
+.search-row {
+    /* display: inline; */
+    /* align-self: center; */
+    /* text-align: center; */
+    /* align-content: center; */
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#searchbar {
+    width: 666px;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+    background-color: rgb(235, 235, 235);
+    border: 1px solid grey;
+    padding: 10px;
+    float: left;
+}
+
+#searchbar:focus {
+    outline: none;
+}
+
+.btn {
+    width: 150px;
+    font-size: 18px;
+    padding: 10px;
+    background-color: rgb(60, 132, 255);
+    color: white;
+    border-radius: 10px;
+    border: 1px solid grey;
+    cursor: pointer;
+    border-left: none;
+    margin-left: 15px;
+}
+
+.btn:hover {
+    background: hsl(207, 100%, 35%);
+}
+
+.btn:focus {
+    outline: none;
+}
