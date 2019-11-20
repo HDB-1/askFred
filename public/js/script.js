@@ -4,16 +4,9 @@ var header = document.getElementById("myHeader");
 
 var sticky = header.offsetTop;
 
-function myFunction() {
-  if (window.pageYOffset > sticky) {
-    header.classList.add("sticky");
-  } else {
-    header.classList.remove("sticky");
-  }
-}
+const myFunction = () => (window.pageYOffset > sticky) ? header.classList.add("sticky") : header.classList.remove("sticky");
 
 async function getSearchResults() {
-    await axios.get("http://localhost:8080/results");
     promise = await axios.get("http://localhost:8080/search.json");
     return promise;
 }
