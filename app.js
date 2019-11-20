@@ -20,9 +20,8 @@ app.use(express.urlencoded());
 // Finishing up the body-parser set up
 app.use(bodyParser.urlencoded({extended: true})); //find out more....
 
-
 // Entering 'localhost:8080' into the url presents the homepage
-app.get('/', (req, res) => res.status(200).render('index.html'));
+app.get('/', (req, res) => res.status(200).render('index'));
 
 app.post("/search", (req, res) => {
     const searchTerm = req.body;
@@ -37,18 +36,13 @@ app.get("/data", (req, res) => {
     }).catch((error) => res.send(error.message))
 });
 
-app.get("/search.json", (req, res) => {
-    res.sendFile(path.join(__dirname, "search.json"))
-});
+app.get("/search.json", (req, res) => res.sendFile(path.join(__dirname, "search.json")));
 
+app.get("/results", (req, res) =>  res.status(200).render('results'));
+ // res.sendFile(path.join(__dirname, "results"));
 
-app.get("/results", (req, res) => {
-    res.sendFile(path.join(__dirname, "views/results.html"));
-});
-
-app.get("/mail", (req, res) => {
-    res.sendFile(path.join(__dirname, "views/mail.html"));
-});
-
+ app.get("/mail", (req, res) => res.status(200).render('mail'));
+    // res.sendFile(path.join(__dirname, "mail"));
+    
 // Listening to the server on port 8080
 app.listen(8080, '127.0.0.1', () => console.log('Listening to port 8080..'));
