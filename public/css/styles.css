@@ -62,7 +62,6 @@ header p {
 }
 
 .btn {
-    /* float: left; */
     width: 10%;
     font-size: 14px;
     padding: 10px;
@@ -83,21 +82,18 @@ header p {
 }
 
 footer {
-    /* position: relative;
+    position: fixed;
+    background-color: rgb(220,220,220);
+    padding: 2px;
+    right: 0;
+    left: 0;
+    width: 100%;
     bottom: 0%;
-    font-size: 14px;
-     */
-    /* position: fixed;
-    bottom: 0;
-    height: 20px;
-    margin: 0 auto;
-    background-color: rgb(237, 237, 237);
-    width: 100%; */
 }
 
 footer p {
     text-align: right;
-    margin: 10px;
+    margin-right: 10px;
 }
 
 .grid-container {
