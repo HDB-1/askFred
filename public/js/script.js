@@ -12,6 +12,10 @@ async function getSearchResults() {
 }
 
 $(document).ready(() => {
+
+   
+
+
   getSearchResults().then((response) =>  {
       console.log(response.data.data)
       return response.data.data;}).then((x) => {
