@@ -8,9 +8,7 @@ module.exports = {
         const apiKey = 'AIzaSyBXxr4fB7X8eyCf_mdx78Aj71QOMSwKhwk';
         const engineID = '008950057093096505639:ps7kra9kwko';
         const baseURL = `https://www.googleapis.com/customsearch/v1?key=${apiKey}&cx=${engineID}&q=${query}`;
-        console.log("created base URL")
         axios.get(baseURL).then(res => {
-            console.log("got response from axios")
             return res.data.items;
         }).then((items) => {
             let json = {
@@ -25,7 +23,6 @@ module.exports = {
                 }
             i++;
             })
-            console.log("created json")
             return json;
         }).then((json) =>{
             fs.writeFile("./search.json", JSON.stringify(json, null, 4), (err) => {

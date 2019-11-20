@@ -12,14 +12,31 @@ function myFunction() {
   }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+//const axios = require('axios');
+
 async function getSearchResults() {
     promise = await axios.get("http://localhost:8080/search.json");
     return promise;
 }
 
 $(document).ready(() => {
-          
-             
+        
+       
+        
+            //event.preventDefault();
+            
             getSearchResults().then((response) =>  {
                 console.log(response.data.data)
                 return response.data.data;}).then((x) => {
@@ -56,7 +73,7 @@ $(document).ready(() => {
                 
             })
             .catch((error) => console.log(error.message))
-        
+
   
 
   
