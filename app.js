@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const express = require('express');
 const axios = require('axios');
+const googleAPI = require('./googleAPI')
 
 // Making an express application
 const app = express();
@@ -21,11 +22,17 @@ app.use(bodyParser.urlencoded({extended: true})); //find out more....
 
 
 // Entering 'localhost:8080' into the url presents the homepage
+
+let query;
 app.get('/', (req, res) => res.status(200).render('index.html'));
 
 app.post("/search", (req, res) => {
-    const searchTerm = req.body;
-    res.redirect("/results")
+    const query = JSON.stringify(req.body);
+    //console.log(query);
+    //console.log(typeof query)
+    googleAPI.search(query)
+    .then(res.sendFile(path.join(__dirname, "./search.json")))
+    .catch((error) => console.log(error.message));
 
 });
 
