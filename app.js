@@ -23,25 +23,18 @@ app.use(bodyParser.urlencoded({extended: true})); //find out more....
 
 // Entering 'localhost:8080' into the url presents the homepage
 
-let query;
+
 app.get('/', (req, res) => res.status(200).render('index.html'));
 
 app.post("/search", (req, res) => {
-    const query = JSON.stringify(req.body);
-    //console.log(query);
-    //console.log(typeof query)
+    console.log(req.body)
+    let query = JSON.stringify(req.body);
     googleAPI.search(query)
-    .then(res.sendFile(path.join(__dirname, "./search.json")))
+    .then(res.sendFile(path.join(__dirname, "./search.json"))).then(res.redirect("results"))
     .catch((error) => console.log(error.message));
 
 });
 
-app.get("/data", (req, res) => {
-    const url = 'http://127.0.0.1:8080/search.json';
-    axios.get(url).then((response) => { 
-        res.send(response.data)
-    }).catch((error) => res.send(error.message))
-});
 
 app.get("/search.json", (req, res) => {
     res.sendFile(path.join(__dirname, "search.json"))
@@ -49,6 +42,7 @@ app.get("/search.json", (req, res) => {
 
 
 app.get("/results", (req, res) => {
+
     res.sendFile(path.join(__dirname, "views/results.html"));
 });
 
