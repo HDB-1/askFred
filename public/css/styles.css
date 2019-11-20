@@ -61,7 +61,7 @@ header p {
     outline: none;
 }
 
-#btn {
+.btn {
     /* float: left; */
     width: 10%;
     font-size: 14px;
@@ -83,11 +83,16 @@ header p {
 }
 
 footer {
-    position: relative;
+    /* position: relative;
     bottom: 0%;
     font-size: 14px;
+     */
+    /* position: fixed;
+    bottom: 0;
+    height: 20px;
+    margin: 0 auto;
     background-color: rgb(237, 237, 237);
-    width: 100%;
+    width: 100%; */
 }
 
 footer p {
