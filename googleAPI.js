@@ -14,18 +14,12 @@ module.exports = {
             console.log("got response from axios")
             return res.data.items;
         }).then((items) => {
-            let json = {
-                'data': []
-            };
+            let json = {'data': []};
             let i = 0;
             items.forEach((item) => {
-                json.data[i] = {
-                    'title': `${item.title}`,
-                    'link': `${item.link}`,
-                    'snippet': `${item.snippet}`
-                }
-            i++;
-            })
+                json.data[i] = {'title': `${item.title}`, 'link': `${item.link}`, 'snippet': `${item.snippet}`}
+                i++;
+            });
             console.log("created json")
             return json;
         }).then((json) =>{
