@@ -24,7 +24,7 @@ module.exports = {
                 console.log("Created JSON object that contains list of items");
                 return jsonListOfItems;
             // Creates the search.json file (which contains the jsonListOfItems)
-            }).then((json) => fs.writeFile("./search.json", JSON.stringify(json, null, 4), (err) => (err) ? console.error("Error error error") : console.log("File has been created"))
+            }).then((json) => fs.writeFile("./search.json", JSON.stringify(json, null, 4), (err) => (err) ? console.error(err) : console.log("File has been created"))
             ).catch((error) => console.log(`Error: ${error.message}`));     
     }
 }
