@@ -1,5 +1,5 @@
 async function getSearchResults() {
-    promise = await axios.get("http://localhost:8080/search.json");
+    promise = await axios.get("http://localhost:8080/lucky.json");
     return promise;
 }
 

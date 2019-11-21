@@ -25,46 +25,74 @@ app.use(bodyParser.urlencoded({extended: true})); //find out more....
 // Entering 'localhost:8080' into the url presents the homepage
 app.get('/', (req, res) => res.status(200).render('index'));
 
-app.post("/search", (req, res) => {
-    const query = JSON.stringify(req.body.search)
-    console.log(req.body.search);
-    console.log("converted query into string")
-    googleAPI.search(query)
-    .then(res.sendFile(path.join(__dirname, "./search.json")))
-    .then( res.redirect("results"))
-    .catch((error) => console.log(error.message));
-    //.then(res.sendFile(path.join(__dirname, "./search.json")))
-    //.then(res.redirect("results"))
-});
+// methods for query
+class Query{
+    constructor(request){
+        this.query = JSON.stringify(request.body.search);
+    }
 
-app.get("/data", (req, res) => {
-    const url = 'http://127.0.0.1:8080/search.json';
-    axios.get(url).then((response) => { 
-        res.send(response.data)
-    }).catch((error) => res.send(error.message))
+    get retrieve(){
+       return this.query;
+    }
+}
+
+const random = () =>{
+    const options = ["food", "money", "news", "famous", "technology", "environment", "gossip"];
+    const index = Math.floor(Math.random()*options.length);
+    return options[index];
+}
+// create global variable
+let query;
+
+// returns a promise, to get a response from API and
+// and sorts data to only get links, snippets and titles
+async function simplifyAPIResponse(searchTerm){
+    const promise = await googleAPI.search(searchTerm);
+    console.log(promise);
+    return promise;
+}
+
+app.post("/search", (req, res) => {
+    query = new Query(req)
+    console.log("converted query into string")
+    res.redirect("results")
 });
 
 app.get("/search.json", (req, res) => {
-    console.log("sent data to search.json");
-    res.sendFile(path.join(__dirname, "search.json"))});
+    simplifyAPIResponse(query.retrieve)
+    .then((response) => 
+    {let searchResults = googleAPI.simplify(response);
+    console.log('search results: ' + searchResults)
+    res.json(searchResults)
+    })
+    .catch((error) => console.log(error.message));
+});
 
 // This route presents the results page
-app.post("/results", (req, res) =>  {
-    console.log("post request to render results page")
-    res.status(200).render('results')});
- // res.sendFile(path.join(__dirname, "results"));
-
 app.get("/results", (req, res) => {
     console.log("get request to render results page")
-    res.sendFile(path.join(__dirname,"views/results.html"))});
+    res.sendFile(path.join(__dirname,"views/results.html")
+    )
+});
 
 //  This route presents the mail page
 app.get("/mail", (req, res) => res.status(200).render('mail'));
-    // res.sendFile(path.join(__dirname, "mail"));
 
 app.get("/lucky", (req, res) => {
-        console.log("get request to render lucky page")
-        res.sendFile(path.join(__dirname,"views/lucky.html"))});
+    console.log("get request to render lucky page")
+    res.sendFile(path.join(__dirname,"views/lucky.html"))
+});
+
+app.get("/lucky.json", (req, res) => {
+    let searchTerm = random();
+    simplifyAPIResponse(searchTerm)
+    .then((response) => 
+    {let searchResults = googleAPI.simplify(response);
+    console.log('search results: ' + searchResults)
+    res.json(searchResults)
+    })
+    .catch((error) => console.log(error.message));
+});
     
 // Listening to the server on port 8080
 app.listen(8080, '127.0.0.1', () => console.log('Listening to port 8080..'));
