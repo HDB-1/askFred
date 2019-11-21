@@ -17,6 +17,7 @@ module.exports = {
                 let jsonListOfItems = {'data': []};
                 let i = 0;
                 items.forEach((item) => {
+                    // Individual item
                     jsonListOfItems.data[i] = {'title': `${item.title}`, 'link': `${item.link}`, 'snippet': `${item.snippet}`}
                     i++;
                 });
