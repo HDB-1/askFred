@@ -46,4 +46,31 @@ $(document).ready(() => {
       });
   })
   .catch((error) => console.log(error.message));
+
+
+   
+
+
+
+var promise1 = new Promise(function(resolve, reject) {
+    setTimeout(function load() {
+         //Check if the current URL contains '#'
+   if(document.URL.indexOf("#")==-1)
+   {
+   // Set the URL to whatever it was plus "#".
+   url = document.URL+"#";
+   location = "#";
+
+   //Reload the page
+   location.reload(true);
+   
+   }
+   console.log("hey")
+
+      resolve('foo');
+    }, 1500);
+  });
+
+  promise1.then()
+
 })
