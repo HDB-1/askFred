@@ -25,13 +25,14 @@ app.use(bodyParser.urlencoded({extended: true}));
 // Entering 'localhost:8080' into the url presents the homepage
 app.get('/', (req, res) => res.status(200).render('index'));
 
+// 
 app.post("/search", (req, res) => {
-    const query = JSON.stringify(req.body.search)
-    console.log(req.body.search);
-    console.log("converted query into string");
+    const query = JSON.stringify(req.body.search);
+    console.log(`What you searched for: ${req.body.search}.`);
+    console.log("Converted query into string.");
     googleAPI.search(query)
         .then(res.sendFile(path.join(__dirname, "./search.json")))
-        .then( res.redirect("results"))
+        .then(res.redirect("results"))
         .catch((error) => console.log(error.message));
 });
 
@@ -44,8 +45,9 @@ app.get("/data", (req, res) => {
 });
 
 app.get("/search.json", (req, res) => {
-    console.log("sent data to search.json");
-    res.sendFile(path.join(__dirname, "search.json"))});
+    console.log("Sent data to search.json");
+    res.sendFile(path.join(__dirname, "search.json"));
+});
 
 // Displays ten search results on the results page
 app.post("/results", (req, res) =>  {
@@ -55,7 +57,7 @@ app.post("/results", (req, res) =>  {
 
 // This route presents the results page
 app.get("/results", (req, res) => {
-    console.log("get request to render results page")
+    console.log("GET request to render results page")
     res.sendFile(path.join(__dirname,"views/results.html"))});
 
 //  This route presents the mail page
@@ -63,7 +65,7 @@ app.get("/mail", (req, res) => res.status(200).render('mail'));
 
 //  This route presents the page that emerges as a result of pressing "Feeling Lucky" btn
 app.get("/lucky", (req, res) => {
-        console.log("get request to render lucky page");
+        console.log("GET request to render lucky page");
         res.sendFile(path.join(__dirname,"views/lucky.html"));
 });
     
