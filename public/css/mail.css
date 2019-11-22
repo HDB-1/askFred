@@ -1,0 +1,58 @@
+body {
+    /* display: flex; */
+    align-content: center;
+    /* text-align: center; */
+    float: left;
+}
+
+.logo {
+    width: 600px;
+    margin-top: 20px;
+    margin-left: 20px;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
+
+.navbar {
+    color: rgb(96, 96, 96);
+    font-size: 18px;
+    font-variant: small-caps;
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    right: 0%;
+    top: 0%;
+}
+
+.navbar:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    color: black;
+}
+
+h1 {
+    font-size: 36px;
+    color: crimson;
+    text-decoration: underline;
+}
+
+h3 {
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.column {
+    float: left;
+    width: 45%;
+    padding: 16px;
+}
+
+p {
+    text-align: left;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: seagreen;
+    font-size: 22px;
+}
+
+

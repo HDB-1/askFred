@@ -1,0 +1,30 @@
+{
+  "name": "askfred",
+  "version": "1.0.0",
+  "description": "Another version of Google",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HDB-1/askFred.git"
+  },
+  "author": "Yusaf, Harry & Lawrencia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HDB-1/askFred/issues"
+  },
+  "homepage": "https://github.com/HDB-1/askFred#readme",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^2.7.3",
+    "express": "^4.17.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.4"
+  }
+}
